@@ -1,4 +1,4 @@
-name: Terraform CICD Pipeline
+name: Terraform CICD Pipeline - ECS PROJECT
 
 on:
   workflow_dispatch:
@@ -38,7 +38,7 @@ jobs:
         run: terraform validate
 
       - name: 'Terraform Plan'
-        run: terraform plan -out=tfplan
+        run: terraform plan -out=tfplan -var="db_password=${{ secrets.db_password }}"
 
       - name: 'Terraform Apply'
         run: terraform apply -auto-approve tfplan
