@@ -1,4 +1,4 @@
-name: Terraform CICD Pipeline - ECS PROJECT
+name: Terraform CICD Pipeline
 
 on:
   workflow_dispatch:
